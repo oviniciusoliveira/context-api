@@ -4,18 +4,8 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 1080px) {
-  html {
-    /* 15px */
-    font-size: 93.75%;
-  }
-}
-
-@media (max-width: 720px) {
-  /* 14px */
-  html {
-    font-size: 87.5%;
-  }
+html {
+  font-size: 200%;
 }
 
 body {
@@ -28,4 +18,29 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body,
+input,
+textarea,
+button {
+  font-size: 1rem;
+}
+
+@media (max-width: 1080px) {
+  body,
+  input,
+  textarea,
+  button {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  body,
+  input,
+  textarea,
+  button {
+    font-size: 87.5%;
+  }
 }

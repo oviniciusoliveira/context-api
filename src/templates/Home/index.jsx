@@ -1,17 +1,17 @@
 /* eslint-disable no-unused-vars */
-import { useEffect } from 'react';
+import { Button } from '../../components/Button';
+import { Heading } from '../../components/Heading';
 import { useCounterContext } from '../../contexts/CounterContext';
 
 function Home() {
   const [state, actions] = useCounterContext();
-
-  useEffect(() => {
-    actions.increase();
-  }, [actions]);
-
   return (
     <div>
-      <h1 onClick={() => actions.increase()}>Context API</h1>
+      <Heading />
+      <div>
+        <Button text="Increase" onButtonClick={actions.increase} />
+        <Button text="Decrease" onButtonClick={actions.decrease} />
+      </div>
     </div>
   );
 }
