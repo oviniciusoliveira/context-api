@@ -1,11 +1,17 @@
 /* eslint-disable no-unused-vars */
+import { useEffect } from 'react';
 import { useCounterContext } from '../../contexts/CounterContext';
 
 function Home() {
-  const [state, dispatch] = useCounterContext();
+  const [state, actions] = useCounterContext();
+
+  useEffect(() => {
+    actions.increase();
+  }, [actions]);
+
   return (
     <div>
-      <p>Context API</p>
+      <h1 onClick={() => actions.increase()}>Context API</h1>
     </div>
   );
 }
